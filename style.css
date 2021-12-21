@@ -372,21 +372,25 @@ p {
   overflow: hidden;
   position: relative;
 }
-#projects .project-img::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0;
+
+#projects .project-item .project-info a {
+  color: crimson;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 1px solid crimson;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  padding: 15px;
+  margin-top: 10px;
+  justify-content: center;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
 }
-#projects .project-img {
-  transition: 0.3s ease transform;
-}
-#projects .project-item:hover .project-img {
-  transform: scale(1.1);
+#projects .project-item .project-info a:hover {
+  color: white;
+  background-color: crimson;
 }
 /*End Project Section*/
 /* About Me */
@@ -538,7 +542,6 @@ p {
 @keyframes text_reveal_name {
   100% {
     color: crimson;
-    font-weight: 500;
   }
 }
 /* End Keyframes */
